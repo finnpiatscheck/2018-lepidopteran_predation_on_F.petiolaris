@@ -1,5 +1,5 @@
 # ======================================================================================================= #
-# R script for reproduction of the analyses in Piatscheck et al 2018 Acto Oecolofica
+# R script for reproduction of the analyses in Piatscheck et al 2018 Acta Oecologica
 # ======================================================================================================= #
 
 # Paper title: Ecological factors associated with pre-dispersal predation of fig seeds and wasps by fig-specialist 
@@ -7,14 +7,14 @@
 # doi.org/10.1016/j.actao.2018.03.001
 
 # The following script allows the reproduction of figure 3 and 4 and the test of association between pre-dispersal 
-# fig predation by Omiodes stigosalis on Ficus petiolaris and ecological variables using generalized linear mixed 
+# fig predation by Omiodes stigmosalis on Ficus petiolaris and ecological variables using generalized linear mixed 
 # models.
 
 # The phylogenetic analysis and spatial aggregation of fig predation analysis (as well as reproduction of Figures 1,
 # 2 and 5) are not presented here as they were not realized in R.
 
 # ------------------------------------------------------------------------------ #
-# Import the data and formating
+# Import the data and formatting
 # ------------------------------------------------------------------------------ #
 
 lep_data <- read.csv("lep_data_Piatscheck.et.al.2018.csv")
@@ -87,7 +87,7 @@ summary(glmer(lep_resp_mat ~ site +
               data=lep_data, 
               family=binomial, 
               control=glmerControl(optimizer="nlminbwrap")))
-# Note: the positive association (marginaly significant) of damaged syconia relative to non-damaged with tree density
+# Note: the positive association (marginally significant) of damaged syconia relative to non-damaged with tree density
 # needs to be interpreted as negative since we used neighbor joining. 
 
 # GLMM with "asynchrony" instead of "proportion of interphase"
